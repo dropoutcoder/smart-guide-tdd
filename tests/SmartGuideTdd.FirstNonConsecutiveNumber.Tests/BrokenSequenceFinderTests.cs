@@ -13,10 +13,11 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
             Assert.Throws<ArgumentNullException>(() => action());
         }
 
+        [TestCase(new int[0])]
         [TestCase(new[] { Int32.MinValue })]
         [TestCase(new[] { 0 })]
         [TestCase(new[] { Int32.MaxValue })]
-        public void Array_Has_One_Item_Throws_ArgumentException(int[] sequence)
+        public void Array_Has_Less_Than_Two_Items_Throws_ArgumentException(int[] sequence)
         {
             var finder = new BrokenSequenceFinder();
 
