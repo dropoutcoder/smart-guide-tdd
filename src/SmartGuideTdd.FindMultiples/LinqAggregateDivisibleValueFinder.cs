@@ -18,9 +18,9 @@ namespace SmartGuideTdd.FindMultiples
                 throw new InvalidOperationException($"Parameter {nameof(limit)} must be greaten than parameter {nameof(@base)}");
             }
 
-            var range = Enumerable.Range((int)@base, (int)limit - (int)@base + 1);
+            var range = GenerateRange(@base, limit);
 
-            var result = range.Aggregate(new List<int>(), (acc, current) =>
+            var result = range.Aggregate(new List<uint>(), (acc, current) =>
             {
                 if(current % @base == 0)
                 {
@@ -30,7 +30,15 @@ namespace SmartGuideTdd.FindMultiples
                 return acc;
             });
 
-            return result.Select(x => (uint)x);
+            return result;
+        }
+
+        private IEnumerable<uint> GenerateRange(uint start, uint limit)
+        {
+            for(uint i = start; i <= limit; i++)
+            {
+                yield return i;
+            }
         }
     }
 }
