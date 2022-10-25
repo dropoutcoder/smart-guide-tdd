@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Tests", "tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests.csproj", "{E944B33A-A9E0-4547-9A48-0DCF06939525}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks", "benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks.csproj", "{C8F7A10A-EC74-4913-960C-BF9324351663}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{E944B33A-A9E0-4547-9A48-0DCF06939525}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E944B33A-A9E0-4547-9A48-0DCF06939525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E944B33A-A9E0-4547-9A48-0DCF06939525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F7A10A-EC74-4913-960C-BF9324351663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F7A10A-EC74-4913-960C-BF9324351663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F7A10A-EC74-4913-960C-BF9324351663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F7A10A-EC74-4913-960C-BF9324351663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{A995FF4F-BA29-43E3-968A-5846DA2AFDD8} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
 		{A761043E-2D9C-4F2E-8066-08AC9E92873D} = {A162AB2B-0EB0-46AB-8B16-5EC4F5BB8260}
 		{E944B33A-A9E0-4547-9A48-0DCF06939525} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
+		{C8F7A10A-EC74-4913-960C-BF9324351663} = {A162AB2B-0EB0-46AB-8B16-5EC4F5BB8260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7081939-09C3-4AF9-830B-04D3244302B0}
