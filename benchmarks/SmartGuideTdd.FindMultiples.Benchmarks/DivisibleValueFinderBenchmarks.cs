@@ -1,7 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Running;
 using SmartGuideTdd.FindMultiples.Abstraction;
-using System.Collections.Generic;
 
 namespace SmartGuideTdd.FindMultiples.Benchmarks
 {

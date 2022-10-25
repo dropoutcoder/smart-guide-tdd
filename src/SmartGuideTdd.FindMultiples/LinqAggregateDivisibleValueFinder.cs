@@ -22,7 +22,7 @@ namespace SmartGuideTdd.FindMultiples
 
             var result = range.Aggregate(new List<uint>(), (acc, current) =>
             {
-                if(current % @base == 0)
+                if (current % @base == 0)
                 {
                     acc.Add(current);
                 }
@@ -35,7 +35,7 @@ namespace SmartGuideTdd.FindMultiples
 
         private IEnumerable<uint> GenerateRange(uint start, uint limit)
         {
-            for(uint i = start; i <= limit; i++)
+            for (uint i = start; i <= limit; i++)
             {
                 yield return i;
             }
