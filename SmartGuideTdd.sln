@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FindMultiples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FindMultiples", "src\SmartGuideTdd.FindMultiples\SmartGuideTdd.FindMultiples.csproj", "{496E472C-9FEE-4747-B0DC-835DA2F1EA83}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{A162AB2B-0EB0-46AB-8B16-5EC4F5BB8260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FindMultiples.Benchmarks", "benchmarks\SmartGuideTdd.FindMultiples.Benchmarks\SmartGuideTdd.FindMultiples.Benchmarks.csproj", "{A761043E-2D9C-4F2E-8066-08AC9E92873D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{496E472C-9FEE-4747-B0DC-835DA2F1EA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496E472C-9FEE-4747-B0DC-835DA2F1EA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496E472C-9FEE-4747-B0DC-835DA2F1EA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A761043E-2D9C-4F2E-8066-08AC9E92873D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A761043E-2D9C-4F2E-8066-08AC9E92873D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A761043E-2D9C-4F2E-8066-08AC9E92873D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A761043E-2D9C-4F2E-8066-08AC9E92873D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A995FF4F-BA29-43E3-968A-5846DA2AFDD8} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
+		{A761043E-2D9C-4F2E-8066-08AC9E92873D} = {A162AB2B-0EB0-46AB-8B16-5EC4F5BB8260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7081939-09C3-4AF9-830B-04D3244302B0}
