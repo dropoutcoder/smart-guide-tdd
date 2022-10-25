@@ -6,6 +6,11 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber
     {
         public int Find(int[] sequence)
         {
+            if (sequence is null)
+            {
+                throw new ArgumentNullException(nameof(sequence));
+            }
+
             throw new NotImplementedException();
         }
     }
