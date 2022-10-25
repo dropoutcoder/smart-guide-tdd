@@ -4,7 +4,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber
 {
     public class BitwiseBrokenSequenceFinder : IBrokenSequenceFinder
     {
-        public int Find(int[] sequence)
+        public int? Find(int[] sequence)
         {
             if (sequence is null)
             {
@@ -24,7 +24,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber
                 }
             }
 
-            return 0;
+            return null;
         }
     }
 }

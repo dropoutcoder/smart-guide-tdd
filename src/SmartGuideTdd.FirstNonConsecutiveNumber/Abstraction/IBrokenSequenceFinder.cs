@@ -10,6 +10,6 @@
         /// </summary>
         /// <param name="sequence">Array of number representing sequence</param>
         /// <returns>Returns first number missing in the sequence, if any exists, otherwise null</returns>
-        public int Find(int[] sequence);
+        public int? Find(int[] sequence);
     }
 }
