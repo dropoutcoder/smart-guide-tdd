@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using SmartGuideTdd.FirstNonConsecutiveNumber.Abstraction;
 
 namespace SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks
 {

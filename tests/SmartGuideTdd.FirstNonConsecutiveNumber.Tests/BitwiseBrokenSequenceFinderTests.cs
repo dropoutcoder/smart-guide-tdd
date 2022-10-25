@@ -54,7 +54,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
         [TestCase(new[] { -2, -1, 0 }, null)]
         [TestCase(new[] { -1, 0, 1 }, null)]
         [TestCase(new[] { Int32.MinValue, Int32.MinValue + 1, Int32.MinValue + 2 }, null)]
-        [TestCase(new[] { Int32.MaxValue - 2, Int32.MaxValue - 1, Int32.MaxValue}, null)]
+        [TestCase(new[] { Int32.MaxValue - 2, Int32.MaxValue - 1, Int32.MaxValue }, null)]
         [TestCase(new[] { Int32.MinValue, Int32.MinValue + 2, Int32.MinValue + 3 }, Int32.MinValue + 2)]
         [TestCase(new[] { Int32.MinValue, 0, 1 }, 0)]
         [TestCase(new[] { 0, 1, Int32.MaxValue }, Int32.MaxValue)]
