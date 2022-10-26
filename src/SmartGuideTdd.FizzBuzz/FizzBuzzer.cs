@@ -1,4 +1,5 @@
 ﻿using SmartGuideTdd.FizzBuzz.Abstraction;
+using System.Globalization;
 
 namespace SmartGuideTdd.FizzBuzz
 {
@@ -28,7 +29,7 @@ namespace SmartGuideTdd.FizzBuzz
                 return "fizz";
             }
 
-            throw new NotImplementedException();
+            return value.ToString(CultureInfo.InvariantCulture);
         }
 
         private bool IsDivisibleBy(int value, int divider)
