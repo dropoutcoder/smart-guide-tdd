@@ -19,13 +19,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FirstNonConse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks", "benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks.csproj", "{C8F7A10A-EC74-4913-960C-BF9324351663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FizzBuzz", "src\SmartGuideTdd.FizzBuzz\SmartGuideTdd.FizzBuzz.csproj", "{8D80032A-8D88-4FA3-8508-69FF7B6DA396}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FizzBuzz", "src\SmartGuideTdd.FizzBuzz\SmartGuideTdd.FizzBuzz.csproj", "{8D80032A-8D88-4FA3-8508-69FF7B6DA396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FizzBuzz.Tests", "tests\SmartGuideTdd.FizzBuzz.Tests\SmartGuideTdd.FizzBuzz.Tests.csproj", "{95C1903C-A430-452A-A2FB-0778E0C6458C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FizzBuzz.Tests", "tests\SmartGuideTdd.FizzBuzz.Tests\SmartGuideTdd.FizzBuzz.Tests.csproj", "{95C1903C-A430-452A-A2FB-0778E0C6458C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.SumWithoutHighestAndLowest", "src\SmartGuideTdd.SumWithoutHighestAndLowest\SmartGuideTdd.SumWithoutHighestAndLowest.csproj", "{98277178-6971-4D90-9070-D66C157CC3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.SumWithoutHighestAndLowest", "src\SmartGuideTdd.SumWithoutHighestAndLowest\SmartGuideTdd.SumWithoutHighestAndLowest.csproj", "{98277178-6971-4D90-9070-D66C157CC3FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.SumWithoutHighestAndLowest.Tests", "tests\SmartGuideTdd.SumWithoutHighestAndLowest.Tests\SmartGuideTdd.SumWithoutHighestAndLowest.Tests.csproj", "{39FDF977-5BDA-4899-BD8C-195CA22AC414}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.SumWithoutHighestAndLowest.Tests", "tests\SmartGuideTdd.SumWithoutHighestAndLowest.Tests\SmartGuideTdd.SumWithoutHighestAndLowest.Tests.csproj", "{39FDF977-5BDA-4899-BD8C-195CA22AC414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.GameOfLife", "src\SmartGuideTdd.GameOfLife\SmartGuideTdd.GameOfLife.csproj", "{185FEDD1-45DD-4D44-921E-C17B51E49FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.GameOfLife.Tests", "tests\SmartGuideTdd.GameOfLife.Tests\SmartGuideTdd.GameOfLife.Tests.csproj", "{4DEA914A-5261-438B-B1DC-3F48EDB97C86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,14 @@ Global
 		{39FDF977-5BDA-4899-BD8C-195CA22AC414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FDF977-5BDA-4899-BD8C-195CA22AC414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FDF977-5BDA-4899-BD8C-195CA22AC414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185FEDD1-45DD-4D44-921E-C17B51E49FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185FEDD1-45DD-4D44-921E-C17B51E49FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185FEDD1-45DD-4D44-921E-C17B51E49FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185FEDD1-45DD-4D44-921E-C17B51E49FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEA914A-5261-438B-B1DC-3F48EDB97C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEA914A-5261-438B-B1DC-3F48EDB97C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEA914A-5261-438B-B1DC-3F48EDB97C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEA914A-5261-438B-B1DC-3F48EDB97C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +96,7 @@ Global
 		{C8F7A10A-EC74-4913-960C-BF9324351663} = {A162AB2B-0EB0-46AB-8B16-5EC4F5BB8260}
 		{95C1903C-A430-452A-A2FB-0778E0C6458C} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
 		{39FDF977-5BDA-4899-BD8C-195CA22AC414} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
+		{4DEA914A-5261-438B-B1DC-3F48EDB97C86} = {78AE3739-8172-4D19-8E0F-4FFFA80E1EBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7081939-09C3-4AF9-830B-04D3244302B0}
