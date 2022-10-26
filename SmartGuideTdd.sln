@@ -13,11 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FindMultiples.Benchmarks", "benchmarks\SmartGuideTdd.FindMultiples.Benchmarks\SmartGuideTdd.FindMultiples.Benchmarks.csproj", "{A761043E-2D9C-4F2E-8066-08AC9E92873D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConsecutiveNumber", "src\SmartGuideTdd.FirstNonConsecutiveNumber\SmartGuideTdd.FirstNonConsecutiveNumber.csproj", "{C81FD328-536F-4AF0-8E2C-98AA94CA4615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FirstNonConsecutiveNumber", "src\SmartGuideTdd.FirstNonConsecutiveNumber\SmartGuideTdd.FirstNonConsecutiveNumber.csproj", "{C81FD328-536F-4AF0-8E2C-98AA94CA4615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Tests", "tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests.csproj", "{E944B33A-A9E0-4547-9A48-0DCF06939525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Tests", "tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests\SmartGuideTdd.FirstNonConsecutiveNumber.Tests.csproj", "{E944B33A-A9E0-4547-9A48-0DCF06939525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks", "benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks.csproj", "{C8F7A10A-EC74-4913-960C-BF9324351663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks", "benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks\SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks.csproj", "{C8F7A10A-EC74-4913-960C-BF9324351663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.FizzBuzz", "src\SmartGuideTdd.FizzBuzz\SmartGuideTdd.FizzBuzz.csproj", "{8D80032A-8D88-4FA3-8508-69FF7B6DA396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{C8F7A10A-EC74-4913-960C-BF9324351663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8F7A10A-EC74-4913-960C-BF9324351663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8F7A10A-EC74-4913-960C-BF9324351663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D80032A-8D88-4FA3-8508-69FF7B6DA396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D80032A-8D88-4FA3-8508-69FF7B6DA396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D80032A-8D88-4FA3-8508-69FF7B6DA396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D80032A-8D88-4FA3-8508-69FF7B6DA396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
