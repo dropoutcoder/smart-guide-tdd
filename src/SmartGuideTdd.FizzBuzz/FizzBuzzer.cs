@@ -13,7 +13,17 @@ namespace SmartGuideTdd.FizzBuzz
                 throw new ArgumentOutOfRangeException(nameof(value), value, $"Parameter {nameof(value)} has to be greater than 0.");
             }
 
+            if(IsDivisibleBy(value, 15))
+            {
+                return "fizzbuzz";
+            }
+
             throw new NotImplementedException();
+        }
+
+        private bool IsDivisibleBy(int value, int divider)
+        {
+            return value % divider == 0;
         }
     }
 }
