@@ -9,7 +9,7 @@
         /// Evaluates if <paramref name="value"/> is dividible by 3, 5, or 15
         /// </summary>
         /// <param name="value">A positive number to evaluate</param>
-        /// <returns>Returns "fizz" for <paramref name="value"/> divisible by 3, "buzz" for number divisible by 5, "fizzbuzz" for number divisible by 15, otherwise returns <paramref name="value"/> as string</returns>
+        /// <returns>String representation of <paramref name="value"/>. If divisible by 3 then "fizz", if 5 then "buzz", if 15 then "fizzbuzz", otherwise <paramref name="value"/> as string</returns>
         public string FizzBuzz(int value);
     }
 }
