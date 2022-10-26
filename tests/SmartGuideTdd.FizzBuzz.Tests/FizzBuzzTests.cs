@@ -27,5 +27,19 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             Assert.That(actual, Is.EqualTo("fizzbuzz"));
         }
+
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(20)]
+        [TestCase(2000)]
+        [TestCase(3545)]
+        public void Value_Is_Divisible_By_5_Returns_buzz_String(int value)
+        {
+            var buzzer = new FizzBuzzer();
+
+            var actual = buzzer.FizzBuzz(value);
+
+            Assert.That(actual, Is.EqualTo("buzz"));
+        }
     }
 }

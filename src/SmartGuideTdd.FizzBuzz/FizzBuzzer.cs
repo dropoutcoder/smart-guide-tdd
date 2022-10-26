@@ -18,6 +18,11 @@ namespace SmartGuideTdd.FizzBuzz
                 return "fizzbuzz";
             }
 
+            if (IsDivisibleBy(value, 5))
+            {
+                return "buzz";
+            }
+
             throw new NotImplementedException();
         }
 
