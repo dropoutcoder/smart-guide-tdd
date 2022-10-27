@@ -32,6 +32,12 @@ namespace SmartGuideTdd.FizzBuzz
             return value.ToString(CultureInfo.InvariantCulture);
         }
 
+        /// <summary>
+        /// Evaluates divisibility of <paramref name="value"/> against <paramref name="divider"/>
+        /// </summary>
+        /// <param name="value">Value to evaluate</param>
+        /// <param name="divider">Divider</param>
+        /// <returns>True if <paramref name="value"/> is divisible by <paramref name="divider"/>, otherwise false.</returns>
         private bool IsDivisibleBy(int value, int divider)
         {
             return value % divider == 0;

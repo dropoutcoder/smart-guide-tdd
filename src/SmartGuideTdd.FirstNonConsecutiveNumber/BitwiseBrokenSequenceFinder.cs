@@ -2,8 +2,10 @@
 
 namespace SmartGuideTdd.FirstNonConsecutiveNumber
 {
+    /// <inheritdoc />
     public class BitwiseBrokenSequenceFinder : IBrokenSequenceFinder
     {
+        /// <inheritdoc />
         public int? Find(int[] sequence)
         {
             if (sequence is null)

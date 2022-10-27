@@ -74,6 +74,10 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
             public int Value { get; } = 0;
             public int Count { get; private set; } = 0;
 
+            /// <summary>
+            /// Returns total value
+            /// </summary>
+            /// <returns>Total of value multiplied by count.</returns>
             public int GetTotal()
             {
                 var total = 0;
