@@ -5,32 +5,50 @@ namespace SmartGuideTdd.GameOfLife.Tests
     {
         [Test]
         [TestCaseSource(nameof(GetTestData))]
-        public void Test1((int[,] Currect, int[,] Next) value)
+        public void Test1((int[,] Currect, int[,] Next, bool RunInParallel) value)
         {
             WriteFormatted(value.Currect);
 
-            var game = new GameOfLife();
+            var game = new GameOfLifeExecutor(value.RunInParallel);
 
-            var next = game.Tick(ref value.Currect);
+            var next = game.Tick(value.Currect);
 
             WriteFormatted(next);
 
             Assert.That(next, Is.EqualTo(value.Next));
         }
 
-        private static IEnumerable<(int[,], int[,])> GetTestData()
+        private static IEnumerable<(int[,], int[,], bool)> GetTestData()
         {
             yield return (
                 new int[,] { { 0, 1, 1, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 1 }, { 0, 0, 0, 0 } },
-                new int[,] { { 0, 1, 0, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 } }
+                new int[,] { { 0, 1, 0, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 } },
+                false
             );
             yield return (
                 new int[,] { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } },
-                new int[,] { { 1, 0, 0, 1 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 1, 0, 0, 1 } }
+                new int[,] { { 1, 0, 0, 1 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 1, 0, 0, 1 } },
+                false
             );
             yield return (
                 new int[,] { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } },
-                new int[,] { { 1, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } }
+                new int[,] { { 1, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } },
+                false
+            );
+            yield return (
+                new int[,] { { 0, 1, 1, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 1 }, { 0, 0, 0, 0 } },
+                new int[,] { { 0, 1, 0, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 } },
+                true
+            );
+            yield return (
+                new int[,] { { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 } },
+                new int[,] { { 1, 0, 0, 1 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 1, 0, 0, 1 } },
+                true
+            );
+            yield return (
+                new int[,] { { 0, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } },
+                new int[,] { { 1, 1, 0, 0 }, { 1, 1, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } },
+                true
             );
         }
 

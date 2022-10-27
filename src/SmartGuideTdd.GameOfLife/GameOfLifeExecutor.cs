@@ -3,29 +3,52 @@
     /// <summary>
     /// Provides method executing life evolution simulation
     /// </summary>
-    public class GameOfLife
+    public class GameOfLifeExecutor
     {
+        /// <summary>
+        /// Initialize <see cref="GameOfLifeExecutor"/> instance
+        /// </summary>
+        /// <param name="runInParallel">Execution type instruction</param>
+        public GameOfLifeExecutor(bool runInParallel = false)
+        {
+            RunInParallel = runInParallel;
+        }
+
+        public bool RunInParallel { get; }
+
         /// <summary>
         /// Calculates next life evolution state
         /// </summary>
         /// <param name="current">Current life evolution state</param>
         /// <returns>Calculated next life state based on current state</returns>
-        public int[,] Tick(ref int[,] current)
+        public int[,] Tick(int[,] current)
         {
             var m = current.GetLength(0);
             var n = current.GetLength(1);
 
             var next = new int[m, n];
 
-            for (int i = 0; i < m; i++)
+            if (RunInParallel)
             {
-                for (int j = 0; j < n; j++)
+                Parallel.For(0, m, (i) => EvaluateHorizontalDimension(current, m, n, next, i));
+            }
+            else
+            {
+                for (int i = 0; i < m; i++)
                 {
-                    next[i, j] = Evaluate(ref current, ref i, ref j, GetAvailableDirections(i, j, m, n));
+                    EvaluateHorizontalDimension(current, m, n, next, i);
                 }
             }
 
             return next;
+        }
+
+        private void EvaluateHorizontalDimension(int[,] current, int m, int n, int[,] next, int i)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                next[i, j] = EvaluateCell(ref current, ref i, ref j, GetAvailableDirections(i, j, m, n));
+            }
         }
 
         /// <summary>
@@ -36,7 +59,7 @@
         /// <param name="verticalIndex">Current vertical dimension index</param>
         /// <param name="directions">Allowed direction for neighbor search</param>
         /// <returns>Evaluated state for next life evolution iteration</returns>
-        private int Evaluate(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, Directions directions)
+        private int EvaluateCell(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, Directions directions)
         {
             var cell = current[horizontalIndex, verticalIndex];
 
