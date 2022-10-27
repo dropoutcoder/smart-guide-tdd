@@ -3,7 +3,7 @@
 namespace SmartGuideTdd.FirstNonConsecutiveNumber
 {
     /// <inheritdoc />
-    public class LinqIntersectBrokenSequenceFinder : IBrokenSequenceFinder
+    public class LinqBrokenSequenceFinder : IBrokenSequenceFinder
     {
         /// <inheritdoc />
         public int? Find(int[] sequence)
@@ -20,12 +20,15 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber
 
             var range = Enumerable.Range(sequence[0], sequence.Length);
 
-            var result = sequence
-                .Intersect(range);
+            var result = range
+                .GroupJoin(sequence, r => r, s => s, (r, s) => new { R = r, S = s })
+                .SkipWhile(x => x.S.Count() > 0)
+                .TakeWhile(x => x.S.Count() == 0)
+                .LastOrDefault();
 
-            return result.Count() == 0
+            return result is null
                 ? null
-                : result.First();
+                : result.R + 1;
         }
     }
 }

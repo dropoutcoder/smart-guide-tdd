@@ -33,6 +33,12 @@ namespace SmartGuideTdd.FindMultiples
             return result;
         }
 
+        /// <summary>
+        /// Generates range of numbers between <paramref name="start"/> and <paramref name="limit"/>
+        /// </summary>
+        /// <param name="start">Inclusive initial range value</param>
+        /// <param name="limit">Inclusive limit range value</param>
+        /// <returns></returns>
         private IEnumerable<uint> GenerateRange(uint start, uint limit)
         {
             for (uint i = start; i <= limit; i++)
