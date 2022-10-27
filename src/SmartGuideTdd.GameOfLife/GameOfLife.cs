@@ -1,8 +1,8 @@
 ﻿namespace SmartGuideTdd.GameOfLife
 {
-    public static class GameOfLife
+    public class GameOfLife
     {
-        public static int[,] Tick(ref int[,] current)
+        public int[,] Tick(ref int[,] current)
         {
             var m = current.GetLength(0);
             var n = current.GetLength(1);
@@ -20,7 +20,7 @@
             return next;
         }
 
-        private static int Evaluate(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, Directions directions)
+        private int Evaluate(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, Directions directions)
         {
             var cell = current[horizontalIndex, verticalIndex];
 
@@ -36,7 +36,7 @@
             }
         }
 
-        private static int GetAliveNeighborCount(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, ref Directions directions)
+        private int GetAliveNeighborCount(ref int[,] current, ref int horizontalIndex, ref int verticalIndex, ref Directions directions)
         {
             var aliveNeighbourCount = 0;
 
@@ -83,7 +83,7 @@
             return aliveNeighbourCount;
         }
 
-        private static Directions GetAvailableDirections(int horizontalIndex, int verticalIndex, int horizontalMax, int verticalMax)
+        private Directions GetAvailableDirections(int horizontalIndex, int verticalIndex, int horizontalMax, int verticalMax)
         {
             var directions = Directions.Left | Directions.Top | Directions.Right | Directions.Bottom;
 

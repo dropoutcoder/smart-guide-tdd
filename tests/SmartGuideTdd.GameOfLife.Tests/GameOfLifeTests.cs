@@ -4,19 +4,21 @@ namespace SmartGuideTdd.GameOfLife.Tests
     public class GameOfLifeTests
     {
         [Test]
-        [TestCaseSource(nameof(GetIt))]
+        [TestCaseSource(nameof(GetTestData))]
         public void Test1((int[,] Currect, int[,] Next) value)
         {
             WriteFormatted(value.Currect);
 
-            var next = GameOfLife.Tick(ref value.Currect);
+            var game = new GameOfLife();
+                
+           var next = game.Tick(ref value.Currect);
 
             WriteFormatted(next);
 
             Assert.That(next, Is.EqualTo(value.Next));
         }
 
-        private static IEnumerable<(int[,], int[,])> GetIt()
+        private static IEnumerable<(int[,], int[,])> GetTestData()
         {
             yield return (
                 new int[,] { { 0, 1, 1, 0 }, { 1, 0, 0, 0 }, { 1, 1, 0, 1 }, { 0, 0, 0, 0 } },
