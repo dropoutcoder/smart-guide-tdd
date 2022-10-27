@@ -1,5 +1,3 @@
-using SmartGuideTdd.SumWithoutHighestAndLowest.Abstraction;
-
 namespace SmartGuideTdd.SumWithoutHighestAndLowest.Tests
 {
     [TestFixture]

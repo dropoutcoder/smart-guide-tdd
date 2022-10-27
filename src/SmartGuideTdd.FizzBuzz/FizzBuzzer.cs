@@ -9,12 +9,12 @@ namespace SmartGuideTdd.FizzBuzz
         /// <inheritdoc />
         public string FizzBuzz(int value)
         {
-            if(value < 1)
+            if (value < 1)
             {
                 throw new ArgumentOutOfRangeException(nameof(value), value, $"Parameter {nameof(value)} has to be greater than 0.");
             }
 
-            if(IsDivisibleBy(value, 15))
+            if (IsDivisibleBy(value, 15))
             {
                 return "fizzbuzz";
             }

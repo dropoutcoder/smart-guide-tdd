@@ -10,8 +10,8 @@ namespace SmartGuideTdd.GameOfLife.Tests
             WriteFormatted(value.Currect);
 
             var game = new GameOfLife();
-                
-           var next = game.Tick(ref value.Currect);
+
+            var next = game.Tick(ref value.Currect);
 
             WriteFormatted(next);
 

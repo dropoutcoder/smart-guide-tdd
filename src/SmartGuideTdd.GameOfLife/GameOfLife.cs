@@ -133,7 +133,7 @@
             {
                 directions &= ~Directions.Right;
             }
-            
+
             if (horizontalIndex == horizontalMax - 1)
             {
                 directions &= ~Directions.Bottom;

@@ -45,7 +45,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
                 occurence++;
                 return true;
             }
-            
+
             if (createNew(occurence, value))
             {
                 occurence = new Occurence(value, 1);
