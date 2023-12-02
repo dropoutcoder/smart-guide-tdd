@@ -35,7 +35,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
         /// Attempting to update existing value
         /// </summary>
         /// <param name="value">A value for occurence</param>
-        /// <param name="createNew">Function evaluating if new instance of <see cref="Occurence"/> should be created.</param>
+        /// <param name="createNew">Function efaluating if new instance of <see cref="Occurence"/> should be created.</param>
         /// <param name="occurence">Current occurence instance</param>
         /// <returns>True if <paramref name="min"/> is updated, false if <paramref name="occurence"/> is replaced by new instance, otherwise false.</returns>
         private static bool TryUpdate(int value, Func<Occurence, int, bool> createNew, ref Occurence occurence)
@@ -58,7 +58,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
         /// <summary>
         /// Represents number of occurence for particular number
         /// </summary>
-        private struct Occurence
+        public struct Occurence
         {
             /// <summary>
             /// Initializes instance of Occurence
