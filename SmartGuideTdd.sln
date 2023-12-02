@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.GameOfLife", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.GameOfLife.Tests", "tests\SmartGuideTdd.GameOfLife.Tests\SmartGuideTdd.GameOfLife.Tests.csproj", "{4DEA914A-5261-438B-B1DC-3F48EDB97C86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartGuideTdd.GameOfLife.Benchmarks", "benchmarks\SmartGuideTdd.GameOfLife.Benchmarks\SmartGuideTdd.GameOfLife.Benchmarks.csproj", "{1EE47A6A-8998-46C7-A72D-D8712D4FFEC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartGuideTdd.GameOfLife.Benchmarks", "benchmarks\SmartGuideTdd.GameOfLife.Benchmarks\SmartGuideTdd.GameOfLife.Benchmarks.csproj", "{1EE47A6A-8998-46C7-A72D-D8712D4FFEC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
