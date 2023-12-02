@@ -58,7 +58,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
         /// <summary>
         /// Represents number of occurence for particular number
         /// </summary>
-        public struct Occurence
+        private struct Occurence
         {
             /// <summary>
             /// Initializes instance of Occurence
