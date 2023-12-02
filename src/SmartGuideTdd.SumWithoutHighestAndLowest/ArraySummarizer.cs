@@ -38,7 +38,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
         /// <param name="createNew">Function efaluating if new instance of <see cref="Occurence"/> should be created.</param>
         /// <param name="occurence">Current occurence instance</param>
         /// <returns>True if <paramref name="min"/> is updated, false if <paramref name="occurence"/> is replaced by new instance, otherwise false.</returns>
-        private static bool? TryUpdate(int value, Func<Occurence, int, bool> createNew, ref Occurence occurence)
+        private static bool TryUpdate(int value, Func<Occurence, int, bool> createNew, ref Occurence occurence)
         {
             if (occurence.Value == value)
             {
@@ -52,7 +52,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest
                 return false;
             }
 
-            return null;
+            return false;
         }
 
         /// <summary>
