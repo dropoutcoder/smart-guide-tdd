@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks;
 
 namespace SmartGuideTdd.GameOfLife.Benchmarks
 {

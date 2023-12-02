@@ -1,3 +1,5 @@
+using NUnit.Framework.Legacy;
+
 namespace SmartGuideTdd.FizzBuzz.Tests
 {
     [TestFixture]
@@ -11,7 +13,7 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             var action = () => buzzer.FizzBuzz(value);
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => action());
+            ClassicAssert.Throws<ArgumentOutOfRangeException>(() => action());
         }
 
         [TestCase(15)]
@@ -25,7 +27,7 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             var actual = buzzer.FizzBuzz(value);
 
-            Assert.That(actual, Is.EqualTo("fizzbuzz"));
+            ClassicAssert.That(actual, Is.EqualTo("fizzbuzz"));
         }
 
         [TestCase(5)]
@@ -39,7 +41,7 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             var actual = buzzer.FizzBuzz(value);
 
-            Assert.That(actual, Is.EqualTo("buzz"));
+            ClassicAssert.That(actual, Is.EqualTo("buzz"));
         }
 
         [TestCase(3)]
@@ -53,7 +55,7 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             var actual = buzzer.FizzBuzz(value);
 
-            Assert.That(actual, Is.EqualTo("fizz"));
+            ClassicAssert.That(actual, Is.EqualTo("fizz"));
         }
 
         [TestCase(4)]
@@ -67,7 +69,7 @@ namespace SmartGuideTdd.FizzBuzz.Tests
 
             var actual = buzzer.FizzBuzz(value);
 
-            Assert.That(actual, Is.EqualTo($"{value}"));
+            ClassicAssert.That(actual, Is.EqualTo($"{value}"));
         }
     }
 }

@@ -1,3 +1,5 @@
+using NUnit.Framework.Legacy;
+
 namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 {
     [TestFixture]
@@ -10,7 +12,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 
             var action = () => finder.Find(null);
 
-            Assert.Throws<ArgumentNullException>(() => action());
+            ClassicAssert.Throws<ArgumentNullException>(() => action());
         }
 
         [TestCase(new int[0])]
@@ -23,7 +25,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 
             var action = () => finder.Find(sequence);
 
-            Assert.Throws<ArgumentException>(() => action());
+            ClassicAssert.Throws<ArgumentException>(() => action());
         }
 
         //[TestCase(new[] { Int32.MaxValue, Int32.MinValue })]
@@ -35,7 +37,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 
         //    var action = () => finder.Find(sequence);
 
-        //    Assert.Throws<InvalidOperationException>(() => action());
+        //   ClassicAssert.Throws<InvalidOperationException>(() => action());
         //}
 
         //[TestCase(new[] { Int32.MinValue, Int32.MinValue, 0, Int32.MaxValue })]
@@ -47,7 +49,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 
         //    var action = () => finder.Find(sequence);
 
-        //    Assert.Throws<InvalidOperationException>(() => action());
+        //   ClassicAssert.Throws<InvalidOperationException>(() => action());
         //}
 
         [TestCase(new[] { -1, 0, 1 }, null)]
@@ -62,7 +64,7 @@ namespace SmartGuideTdd.FirstNonConsecutiveNumber.Tests
 
             var actual = finder.Find(sequence);
 
-            Assert.That(actual, Is.EqualTo(expected));
+            ClassicAssert.That(actual, Is.EqualTo(expected));
         }
     }
 }

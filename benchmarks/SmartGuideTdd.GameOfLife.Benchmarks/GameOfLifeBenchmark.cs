@@ -1,7 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
-using SmartGuideTdd.GameOfLife;
 
-namespace SmartGuideTdd.FirstNonConsecutiveNumber.Benchmarks
+namespace SmartGuideTdd.GameOfLife.Benchmarks
 {
     [MinColumn, MaxColumn, MemoryDiagnoser]
     public class GameOfLifeBenchmark

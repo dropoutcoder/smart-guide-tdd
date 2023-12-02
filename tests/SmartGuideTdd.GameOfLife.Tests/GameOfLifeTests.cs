@@ -1,3 +1,5 @@
+using NUnit.Framework.Legacy;
+
 namespace SmartGuideTdd.GameOfLife.Tests
 {
     [TestFixture]
@@ -15,7 +17,7 @@ namespace SmartGuideTdd.GameOfLife.Tests
 
             WriteFormatted(next);
 
-            Assert.That(next, Is.EqualTo(value.Next));
+            ClassicAssert.That(next, Is.EqualTo(value.Next));
         }
 
         private static IEnumerable<(int[,], int[,], bool)> GetTestData()

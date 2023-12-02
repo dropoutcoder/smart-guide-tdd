@@ -1,4 +1,5 @@
-﻿using SmartGuideTdd.FindMultiples.Abstraction;
+﻿using NUnit.Framework.Legacy;
+using SmartGuideTdd.FindMultiples.Abstraction;
 
 namespace SmartGuideTdd.FindMultiples.Tests
 {
@@ -13,7 +14,7 @@ namespace SmartGuideTdd.FindMultiples.Tests
 
             var func = (uint @base, uint limit) => finder.Find(@base, limit).ToList();
 
-            Assert.Catch<InvalidOperationException>(() => func(@base, limit));
+            ClassicAssert.Catch<InvalidOperationException>(() => func(@base, limit));
         }
 
         [Test]
@@ -21,7 +22,7 @@ namespace SmartGuideTdd.FindMultiples.Tests
         {
             IDivisibleValueFinder finder = new ForLoopDivisibleValueFinder();
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => finder.Find(uint.MinValue, uint.MaxValue).ToList());
+            ClassicAssert.Throws<ArgumentOutOfRangeException>(() => finder.Find(uint.MinValue, uint.MaxValue).ToList());
         }
 
         [TestCase(1U, 3U, new uint[] { 1U, 2U, 3U })]

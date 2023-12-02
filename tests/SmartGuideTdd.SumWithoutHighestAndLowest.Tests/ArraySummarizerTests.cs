@@ -1,3 +1,5 @@
+using NUnit.Framework.Legacy;
+
 namespace SmartGuideTdd.SumWithoutHighestAndLowest.Tests
 {
     [TestFixture]
@@ -10,7 +12,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest.Tests
 
             var action = () => summarizer.Sum(null!);
 
-            Assert.Throws<ArgumentNullException>(() => action());
+            ClassicAssert.Throws<ArgumentNullException>(() => action());
         }
 
         [Test]
@@ -20,7 +22,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest.Tests
 
             var action = () => summarizer.Sum(new int[] { Int32.MaxValue, Int32.MaxValue - 1, Int32.MaxValue - 2, Int32.MaxValue - 3, Int32.MaxValue - 4 });
 
-            Assert.Throws<OverflowException>(() => action());
+            ClassicAssert.Throws<OverflowException>(() => action());
         }
 
         [TestCase(new int[] { -10, 0, -10, 10, 9, 10 }, 9)]
@@ -33,7 +35,7 @@ namespace SmartGuideTdd.SumWithoutHighestAndLowest.Tests
 
             var actual = summarizer.Sum(value);
 
-            Assert.That(actual, Is.EqualTo(expected));
+            ClassicAssert.That(actual, Is.EqualTo(expected));
         }
     }
 }
